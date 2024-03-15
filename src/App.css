@@ -1,0 +1,342 @@
+.xRoot {
+  display:block;
+  max-width:1600px;
+  min-width:400px;
+  margin:0 auto ;
+}
+
+html, body {
+  margin:0;
+  padding:0;
+  font-family: 'Circe';
+  font-weight: 400;
+  background:none;
+  color:#000;
+  min-height:100%;
+}
+/* html {
+  background-image:url(./images/bg.jpg);
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-attachment:fixed;
+  font-size:16px;
+} */
+
+
+
+
+
+.navigation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  background-color: #fee5e1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navigation-menu {
+  display: flex;
+}
+
+.left-menu a,
+.right-menu a {
+  text-decoration: none;
+  color: #000;
+  padding: 0 10px;
+  font-family: 'Circe', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.navigation-logo {
+  margin: 0 20px;
+}
+
+.navigation-logo img {
+  height: 50px;
+}
+
+.navigation-menu a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navigation-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navigation-menu a:hover,
+.navigation-menu a:focus {
+  color: #fff;
+}
+
+.navigation-menu a:hover::after,
+.navigation-menu a:focus::after {
+  transform: scaleX(1);
+}
+
+.main-content {
+  position: relative;
+  background-image: url('./img/mainpeople.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  padding: 300px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.content-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.content-overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.main-title {
+  font-family: 'Circe', sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  margin: 0;
+}
+
+.main-subtitle {
+  font-family: 'Circe', sans-serif;
+  font-weight: bold;
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+.join-button {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 18px;
+  background-color: #aee4ff;
+  color: white;
+  border: none;
+  padding: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  text-transform: uppercase;
+  width: 200px;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.join-button:hover {
+  background-color: #fee5e1;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.main-content-wrapper {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0px;
+  box-sizing: border-box;
+}
+
+.content-image-wrapper {
+  flex: 1;
+  order: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-image {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.content-details-wrapper {
+  flex: 2;
+  order: 2;
+  padding-left: 40px;
+}
+
+.content-details-title {
+  font-family: 'Circe', sans-serif;
+  font-size: 600;
+  font-size: 44px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.content-details-list {
+  list-style: none;
+  padding: 0;
+
+}
+
+.arrow-icon-wrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #aee4ff;
+  margin-right: 8px;
+}
+
+.arrow-icon-wrapper img {
+  width: 16px;
+  height: 16px;
+}
+
+.content-details-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.content-details-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content-button {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 16px;
+  background-color: #aee4ff;
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  text-transform: uppercase;
+  width: 150px;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.main-content-button:hover {
+  background-color: #fee5e1;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(90deg, #aee4ff 0%, #fee5e1 100%); /* Градиент, как на изображении */
+  padding: 20px 0; /* Отступ сверху и снизу */
+  color: white; /* Цвет текста */
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Гарантирует, что иконка и текст выравниваются по центру */
+  margin-bottom: 10px; /* Отступ между элементами статистики, если это необходимо */
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column; /* Элементы друг под другом */
+  align-items: start; /* Выравнивание по центру */
+  justify-content: center;
+}
+
+.stat-icon {
+  width: 40px;
+  height: 40px;
+  fill: #fff;
+}
+
+.stat-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px; /* Диаметр круга */
+  height: 80px; /* Диаметр круга */
+  border-radius: 50%; /* Делает элемент круглым */
+  background-color: rgba(255, 255, 255, 0.5); /* Полупрозрачный белый фон */
+  margin-right: 10px; /* Отступ между иконкой и текстом */
+}
+
+.stat-number {
+  font-family: "Open Sans";
+  font-size: 54px; /* Размер шрифта для чисел */
+  font-weight: bold; /* Жирный шрифт для чисел */
+}
+
+.stat-label {
+  font-size: 18px;
+  font-family: 'Open Sans';
+    font-weight: 700;
+}
+
+.footer-container {
+  background-color: #fee5e1;
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo {
+  margin-right: 20px;
+}
+
+.footer-logo img {
+  height: 50px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #000;
+  margin: 0 10px;
+  font-family: 'Circe', sans-serif;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
