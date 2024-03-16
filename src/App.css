@@ -14,6 +14,16 @@ html, body {
   color:#000;
   min-height:100%;
 }
+
+p {
+  margin:0;
+  padding:0;
+}
+
+ul {
+  margin:0;
+  padding:0;
+}
 /* html {
   background-image:url(./images/bg.jpg);
   background-position:center center;
@@ -201,7 +211,6 @@ html, body {
 .content-details-list {
   list-style: none;
   padding: 0;
-
 }
 
 .arrow-icon-wrapper {
@@ -213,6 +222,7 @@ html, body {
   border-radius: 50%;
   background-color: #aee4ff;
   margin-right: 8px;
+  flex-shrink: 0;
 }
 
 .arrow-icon-wrapper img {
@@ -258,22 +268,22 @@ html, body {
 .stats-container {
   display: flex;
   justify-content: space-around;
-  background: linear-gradient(90deg, #aee4ff 0%, #fee5e1 100%); /* Градиент, как на изображении */
-  padding: 20px 0; /* Отступ сверху и снизу */
-  color: white; /* Цвет текста */
+  background: linear-gradient(90deg, #aee4ff 0%, #fee5e1 100%);
+  padding: 20px 0;
+  color: white;
 }
 
 .stat-item {
   display: flex;
   flex-direction: row;
-  align-items: center; /* Гарантирует, что иконка и текст выравниваются по центру */
-  margin-bottom: 10px; /* Отступ между элементами статистики, если это необходимо */
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .stat-info {
   display: flex;
-  flex-direction: column; /* Элементы друг под другом */
-  align-items: start; /* Выравнивание по центру */
+  flex-direction: column;
+  align-items: start;
   justify-content: center;
 }
 
@@ -287,17 +297,17 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80px; /* Диаметр круга */
-  height: 80px; /* Диаметр круга */
-  border-radius: 50%; /* Делает элемент круглым */
-  background-color: rgba(255, 255, 255, 0.5); /* Полупрозрачный белый фон */
-  margin-right: 10px; /* Отступ между иконкой и текстом */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-right: 10px;
 }
 
 .stat-number {
   font-family: "Open Sans";
-  font-size: 54px; /* Размер шрифта для чисел */
-  font-weight: bold; /* Жирный шрифт для чисел */
+  font-size: 54px;
+  font-weight: bold;
 }
 
 .stat-label {
@@ -305,6 +315,93 @@ html, body {
   font-family: 'Open Sans';
     font-weight: 700;
 }
+/* страницы AboutUS */
+
+.page-wrapper {
+  padding: 30px 60px 60px 60px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.page-wrapper p:not(:last-child) {
+  padding-bottom: 30px;
+}
+
+.about-us_img{
+  position: relative;
+background-image: url('./img/aboutusimg.jpg');
+background-size: cover;
+background-position: center;
+height: 300px;
+padding: 300px 0px;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+
+.page-title {
+  display: inline-flex;
+  position: relative;
+  font-family: 'Circe', sans-serif;
+  font-weight: bold;
+  font-size: 48px;
+  margin: 20px 0px 50px 0px;
+}
+
+.page-title::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  height: 5px;
+  background-color: #aee4ff;
+  border-radius: 1px;
+  width: 100%;
+  left: 0;
+}
+
+.page-text {
+  font-family: 'Circe', Arial, sans-serif;
+  font-weight: 300;
+  color: #000000;
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.pb-20 {
+  padding-bottom: 20px !important;
+}
+
+.custom-list {
+  list-style: none;
+  padding-bottom: 30px;
+}
+
+.custom-list li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  font-family: 'Circe', Arial, sans-serif;
+  font-weight: 300;
+  color: #000000;
+  font-size: 20px;
+}
+
+.custom-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: #aee4ff;
+  border-radius: 50%;
+}
+
+/* Footer */
 
 .footer-container {
   background-color: #fee5e1;

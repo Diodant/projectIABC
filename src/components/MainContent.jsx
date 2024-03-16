@@ -1,6 +1,6 @@
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
-
+import { Link } from 'react-router-dom';
 import ColumnImg from '../img/columnimg.jpg'
 import ArrowImg from '../img/arrow.svg'
 import CommitteeIcon from '../img/committeesvg.svg';
@@ -53,7 +53,12 @@ const MainContent = () => {
             </span>Проведение и поддержка благотворительных и общественных инициатив в сфере красоты и ухода.</li>
         </ul>
         <div className='content-details-button'>
-        <button className="main-content-button">Все цели</button>
+        <Link to={{
+          pathname: "/about-us",
+          state: { scrollTo: "our-goals" }
+          }}>
+          <button className="main-content-button">Все цели</button>
+          </Link>
         </div>
       </div>
     </div>

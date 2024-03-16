@@ -5,7 +5,7 @@ function Navigation() {
   return (
     <div className="navigation-container">
       <div className="navigation-menu left-menu">
-        <a href="#mission">О IABC</a>
+        <Link to="/about-us">О IABC</Link>
         <a href="#goals">Члены Ассоциации</a>
         <a href="#activity">Документы</a>
       </div>
