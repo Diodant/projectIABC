@@ -17,7 +17,7 @@ function AboutUs() {
     }, [state]);
 
   return (
-    <div className="xContent p-0">
+    <div className="xContent">
         <Helmet>
         <title>О IABC</title>
         <meta
