@@ -6,6 +6,8 @@ import AboutUs from './components/AboutUs';
 import MembersPage from './components/MembersPage';
 import Documents from './components/Documents';
 import Statute from './components/Statute';
+import Articles from './components/Articles/Articles';
+import ArticlesPage from './components/Articles/ArticlePage';
 import Contacts from './components/Contacts';
 import Footer from './components/Footer';
 import './App.css';
@@ -23,6 +25,8 @@ function App() {
         <Route path="/" element={<MainContent />} />
         <Route path="/members" element={<MembersPage />} />
         <Route path="/documents" element={<Documents />} />
+        <Route path="/articles" element={<Articles />} />
+        <Route path="/articles/:slug" element={<ArticlesPage />} />
         <Route path="/statute" element={<Statute />} />
         <Route path="/contacts" element={<Contacts />} />
         </Routes>

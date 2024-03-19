@@ -13,8 +13,8 @@ function Navigation() {
         <img src="https://static.tildacdn.com/tild3762-3533-4938-b337-313361633639/IMG_3445.PNG" alt="Логотип" />
       </div>
       <div className="navigation-menu right-menu">
-        <a href="#news">Награды </a>
-        <a href="#contacts">Публикации</a>
+      <Link to="/contacts">Награды </Link>
+        <Link to="/articles">Публикации</Link>
         <Link to="/contacts">Контакты</Link>
       </div>
     </div>

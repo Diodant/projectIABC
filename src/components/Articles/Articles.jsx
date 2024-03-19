@@ -1,0 +1,85 @@
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import articlesData from './articlesData';
+import { Link } from 'react-router-dom';
+
+
+function Articles() {
+
+    const { state } = useLocation();
+
+
+
+    useEffect(() => {
+      if (state?.scrollTo) {
+        const element = document.getElementById(state.scrollTo);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }, [state]);
+
+    const location = useLocation();
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
+
+    useEffect(() => {
+        scrollToTop();
+    }, [location.pathname]);
+
+  return (
+    <div className="xContent">
+        <Helmet>
+        <title>О IABC</title>
+        <meta
+        name="description"
+        content="Международная Ассоциация Красоты и Ухода (International Association of Beauty and Care) является престижным объединением ведущих специалистов в области красоты и ухода"
+        />
+        <link rel="canonical" href="/about-us"/>
+      </Helmet>
+        <div class="articles_img">
+        <div className="content-blur"></div>
+    <div class="content-overlay">
+    <h1 className="main-title">СТАТЬИ АССОЦИАЦИИ</h1>
+    <h1 className="main-title">IABC</h1>
+
+    </div>
+    </div>
+    <div className="articles-wrapper">
+        {/* <div className="block p-box py-6">
+        {articlesData.map(article => (
+          <div key={article.slug} className="review-summary block has-text-links has-border has-border-left-only has-border-width-2 has-border-var-blue pl-4">
+            <div className="is-size-xl has-text-var-blue is-font-title-regular">
+            <Link to={`/articles/${article.slug}`}>{article.title}</Link>
+            <div className="tags mt-3">
+            <span className="articlesMember">{article.author}</span></div>
+            </div>
+          </div>
+        ))}
+      </div> */}
+      <div className="articles-list">
+                {articlesData.map((article) => (
+                    <div key={article.slug} className="article-preview">
+                        <img src={article.imageUrl} alt={article.title} className="article-image" />
+                        <div className="article-info">
+                            <h2 className="article-title">{article.title}</h2>
+                            <p className="article-summary">{article.summary}</p>
+                            <Link to={`/articles/${article.slug}`} className="article-more">Подробнее →</Link>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+
+        </div>
+    </div>
+  );
+}
+
+export default Articles;
