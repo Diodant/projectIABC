@@ -1,11 +1,15 @@
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Navigation from './components/Navigation';
 import MainContent from './components/MainContent';
 import AboutUs from './components/AboutUs';
 import MembersPage from './components/MembersPage';
+import Documents from './components/Documents';
+import Statute from './components/Statute';
+import Contacts from './components/Contacts';
 import Footer from './components/Footer';
 import './App.css';
+import './print-styles.css';
 import './fonts/fonts.css'
 
 
@@ -18,6 +22,9 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/" element={<MainContent />} />
         <Route path="/members" element={<MembersPage />} />
+        <Route path="/documents" element={<Documents />} />
+        <Route path="/statute" element={<Statute />} />
+        <Route path="/contacts" element={<Contacts />} />
         </Routes>
 
       <Footer />

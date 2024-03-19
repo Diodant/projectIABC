@@ -16,6 +16,19 @@ function AboutUs() {
       }
     }, [state]);
 
+    const location = useLocation();
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
+
+    useEffect(() => {
+        scrollToTop();
+    }, [location.pathname]);
+
   return (
     <div className="xContent">
         <Helmet>

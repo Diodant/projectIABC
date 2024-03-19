@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import ArrowImg from '../img/arrow.svg'
 import BoardMembers from './BoardMembers';
 import BoardMembersImage1 from '../img/BoardMembers/boardmember1.jpg';
 import members from './members';
@@ -19,13 +18,26 @@ function MembersPage() {
       }
     }, [state]);
 
+    const location = useLocation();
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
+
+    useEffect(() => {
+        scrollToTop();
+    }, [location.pathname]);
+
   return (
     <div className="xContent">
         <Helmet>
-        <title>Члены Ассоциации</title>
+        <title>Члены Ассоциации IABC</title>
         <meta
         name="description"
-        content="Члены правления Ассоциации Международной Ассоциацией Красоты и Ухода (International Association of Beauty and Care) и список членов Ассоциации"
+        content="Члены правления Международной Ассоциацией Красоты и Ухода (International Association of Beauty and Care) и список членов Ассоциации IABC"
         />
         <link rel="canonical" href="/members"/>
       </Helmet>

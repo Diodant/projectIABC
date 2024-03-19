@@ -57,7 +57,7 @@ const MainContent = () => {
           pathname: "/about-us",
           state: { scrollTo: "our-goals" }
           }}>
-          <button className="main-content-button">Все цели</button>
+          <button className="main-content-button">Наши цели</button>
           </Link>
         </div>
       </div>

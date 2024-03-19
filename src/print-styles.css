@@ -1,0 +1,49 @@
+@media print {
+    /* Скрыть изображение при печати */
+    .documents_img {
+      display: none;
+    }
+
+    /* Скрыть ненужные элементы во время печати */
+    .content-overlay {
+      display: none;
+    }
+
+    /* Увеличить размер шрифта для лучшей читаемости */
+    .page-title,
+    .sub-title,
+    .page-subtext,
+    .custom-list {
+      font-size: 35px;
+    }
+
+    .page-text {
+        font-size: 30px;
+    }
+
+    .custom-list {
+        font-size: 30px;
+    }
+
+    /* Добавить отступы для лучшего форматирования */
+    .page-title {
+      margin-top: 20px;
+    }
+
+    .navigation-container {
+        display: none;
+    }
+
+    .sub-title {
+      margin-top: 10px;
+    }
+
+    .page-subtext {
+      margin-top: 5px;
+    }
+
+    .custom-list {
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+  }
