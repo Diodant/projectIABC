@@ -791,11 +791,11 @@ ul {
   }
 
   .article-title {
-    font-size: 25px; /* Меньший размер шрифта для заголовка */
+    font-size: 25px;
   }
 
   .article-summary {
-    font-size: 20px; /* Меньший размер шрифта для описания */
+    font-size: 20px;
   }
 }
 
@@ -831,18 +831,75 @@ ul {
   }
 
   .article-title {
-    font-size: 24px; /* Меньший размер шрифта для заголовка */
+    font-size: 24px;
   }
 
   .article-summary {
-    font-size: 18px; /* Меньший размер шрифта для описания */
+    font-size: 18px;
   }
 
   .article-more {
-    padding: 8px 16px; /* Меньшее поле для кнопки */
+    padding: 8px 16px;
   }
 }
 
+/* ArticlePage */
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.articlepage-wrapper {
+  padding: 150px 100px 60px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.articlepage-content p:not(:last-child) {
+  padding-bottom: 30px;
+}
+
+.articlepage-content {
+  max-width: 780px;
+  font-family: 'Circe', Arial, sans-serif;
+  font-weight: 300;
+  text-align: start;
+}
+
+.articlepage-title {
+  font-family: 'Circe', sans-serif;
+  font-weight: bold;
+  font-size: 45px;
+  margin-bottom: 60px;
+  color: #333;
+  text-align: center;
+}
+
+.articlepage-summary {
+  font-family: 'Circe', sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 60px;
+  color: #333;
+  text-align: center;
+}
+
+.articlepage-text {
+
+}
+
+.fs-35 {
+  font-size: 30px;
+    line-height: 1.35;
+}
+
+.fs-25 {
+  font-size: 25px;
+    line-height: 1.55;
+}
 
 /* Contacts */
 
