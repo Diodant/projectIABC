@@ -16,8 +16,8 @@ function ArticlePage() {
         <div className="page-title">Статьи IABC</div>
         </div>
       <h1 className="articlepage-title">{article.title}</h1>
-      <div className="articlepage-content">
       <div className='articlepage-summary'><b>{article.summary}</b></div>
+      <div className="articlepage-content">
       <p className='articlepage-text fs-35 mb-30'>{article.content1}</p>
       <p className='fs-25'>{article.content2}</p>
       <p className='fs-25'>{article.content3}</p>
