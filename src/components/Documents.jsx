@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -17,7 +16,7 @@ function Documents() {
       kodexRef.current.scrollIntoView({ behavior: 'smooth' });
     };
 
-    const location = useLocation();
+    const initialLoad = useRef(true);
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -27,8 +26,11 @@ function Documents() {
     };
 
     useEffect(() => {
-        scrollToTop();
-    }, [location.pathname]);
+        if (initialLoad.current) {
+            scrollToTop();
+            initialLoad.current = false;
+        }
+    }, []);
 
   return (
     <div>

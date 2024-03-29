@@ -1,6 +1,8 @@
 import CountUp from 'react-countup';
+import React, { useEffect, useRef } from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
 import { Link } from 'react-router-dom';
+import articlesData from '../components/Articles/articlesData';
 import ColumnImg from '../img/columnimg.jpg'
 import ArrowImg from '../img/arrow.svg'
 import CommitteeIcon from '../img/committeesvg.svg';
@@ -10,6 +12,8 @@ import EventsIcon from '../img/events-svg.svg';
 
 const MainContent = () => {
 
+  const firstThreeArticles = articlesData.slice(0, 3);
+
     const countUpWithVisibility = (endValue) => (
         <VisibilitySensor partialVisibility offset={{ bottom: 200 }}>
           {({ isVisible }) => (
@@ -17,6 +21,22 @@ const MainContent = () => {
           )}
         </VisibilitySensor>
       );
+
+      const initialLoad = useRef(true);
+
+      const scrollToTop = () => {
+          window.scrollTo({
+              top: 0,
+              behavior: "smooth"
+          });
+      };
+
+      useEffect(() => {
+          if (initialLoad.current) {
+              scrollToTop();
+              initialLoad.current = false;
+          }
+      }, []);
 
     return (
         <div>
@@ -100,6 +120,28 @@ const MainContent = () => {
       </div>
       </div>
     </div>
+    <div className='articles-content-wrapper'>
+                <h2 className='content-details-title'>Последние статьи</h2>
+                <div className="articles-list">
+                    {firstThreeArticles.map((article) => (
+                        <div key={article.slug} className="article-preview">
+                            <img src={article.imageUrl} alt={article.title} className="article-image" />
+                            <div className="article-info">
+                                <h3 className="article-title">{article.title}</h3>
+                                <p className="article-summary">
+                                    {article.summary.length > 75
+                                        ? `${article.summary.slice(0, 75)}...`
+                                        : article.summary}
+                                </p>
+                                <Link to={`/articles/${article.slug}`} className="article-more">Подробнее →</Link>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <Link className='article-button-wrapper' to="/articles">
+                    <button className="main-content-button">Все статьи</button>
+                </Link>
+            </div>
       </div>
 
     );

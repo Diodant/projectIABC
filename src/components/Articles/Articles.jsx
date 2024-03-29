@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import articlesData from './articlesData';
@@ -20,7 +20,7 @@ function Articles() {
       }
     }, [state]);
 
-    const location = useLocation();
+    const initialLoad = useRef(true);
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -30,13 +30,16 @@ function Articles() {
     };
 
     useEffect(() => {
-        scrollToTop();
-    }, [location.pathname]);
+        if (initialLoad.current) {
+            scrollToTop();
+            initialLoad.current = false;
+        }
+    }, []);
 
   return (
     <div className="xContent">
         <Helmet>
-        <title>О IABC</title>
+        <title>СТАТЬИ</title>
         <meta
         name="description"
         content="Международная Ассоциация Красоты и Ухода (International Association of Beauty and Care) является престижным объединением ведущих специалистов в области красоты и ухода"
@@ -52,17 +55,6 @@ function Articles() {
     </div>
     </div>
     <div className="articles-wrapper">
-        {/* <div className="block p-box py-6">
-        {articlesData.map(article => (
-          <div key={article.slug} className="review-summary block has-text-links has-border has-border-left-only has-border-width-2 has-border-var-blue pl-4">
-            <div className="is-size-xl has-text-var-blue is-font-title-regular">
-            <Link to={`/articles/${article.slug}`}>{article.title}</Link>
-            <div className="tags mt-3">
-            <span className="articlesMember">{article.author}</span></div>
-            </div>
-          </div>
-        ))}
-      </div> */}
       <div className="articles-list">
                 {articlesData.map((article) => (
                     <div key={article.slug} className="article-preview">

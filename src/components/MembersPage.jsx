@@ -1,8 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import BoardMembers from './BoardMembers';
 import BoardMembersImage1 from '../img/BoardMembers/boardmember1.jpg';
+import BoardMembersImage2 from '../img/BoardMembers/boardmember2.jpg';
+import BoardMembersImage3 from '../img/BoardMembers/boardmember3.jpg';
+import BoardMembersImage4 from '../img/BoardMembers/boardmember4.jpg';
+import BoardMembersImage5 from '../img/BoardMembers/boardmember5.jpg';
+import BoardMembersImage6 from '../img/BoardMembers/boardmember6.jpg';
+import BoardMembersImage7 from '../img/BoardMembers/boardmember7.jpg';
+import BoardMembersImage8 from '../img/BoardMembers/boardmember8.jpg';
+import BoardMembersImage9 from '../img/BoardMembers/boardmember9.jpg';
+import BoardMembersImage10 from '../img/BoardMembers/boardmember10.jpg';
+import BoardMembersImage11 from '../img/BoardMembers/boardmember11.jpg';
+import BoardMembersImage12 from '../img/BoardMembers/boardmember12.jpg';
 import members from './members';
 
 function MembersPage() {
@@ -18,7 +29,7 @@ function MembersPage() {
       }
     }, [state]);
 
-    const location = useLocation();
+    const initialLoad = useRef(true);
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -28,8 +39,11 @@ function MembersPage() {
     };
 
     useEffect(() => {
-        scrollToTop();
-    }, [location.pathname]);
+        if (initialLoad.current) {
+            scrollToTop();
+            initialLoad.current = false;
+        }
+    }, []);
 
   return (
     <div className="xContent">
@@ -59,109 +73,109 @@ function MembersPage() {
         imageSrc={BoardMembersImage1}
         mainText={
             <>
-              Ирина Кравчук <br />(Россия)
+              Ольга Лунина <br />(Россия)
             </>
           }
-        secondaryText="Известная визажистка, владелица школы макияжа"
+        secondaryText="Президент IABC"
       />
         <BoardMembers
-        imageSrc={BoardMembersImage1}
+        imageSrc={BoardMembersImage2}
         mainText={
             <>
-              Дмитрий Стрельников <br />(Россия)
+              Екатерина Слепухина <br />(Россия)
+            </>
+          }
+        secondaryText="Заместитель Президента по общим вопросам"
+      />
+        <BoardMembers
+        imageSrc={BoardMembersImage3}
+        mainText={
+            <>
+              Игорь Стоянов <br />(Украина)
             </>
           }
         secondaryText="Эксперт в области парикмахерского искусства, основатель салонов красоты"
       />
-        <BoardMembers
-        imageSrc={BoardMembersImage1}
+              <BoardMembers
+        imageSrc={BoardMembersImage4}
         mainText={
             <>
-              Екатерина Павлова <br />(Украина)
+              Инга Топчий <br />(Азербайджан)
             </>
           }
-        secondaryText="Известный мастер маникюра и педикюра, победитель международных конкурсов"
+        secondaryText="Директор Академии красоты LOTOS"
+      />
+        <BoardMembers
+        imageSrc={BoardMembersImage5}
+        mainText={
+            <>
+              Себия Алядинова <br />(Армения)
+            </>
+          }
+        secondaryText="Главный комиссар Фестиваля STAR WORLD"
+      />
+        <BoardMembers
+        imageSrc={BoardMembersImage6}
+        mainText={
+            <>
+              Наталья Бова <br />(Беларусь)
+            </>
+          }
+        secondaryText="Основатель Учебного центра индустрии красоты Bova_School"
       />
               <BoardMembers
-        imageSrc={BoardMembersImage1}
+        imageSrc={BoardMembersImage7}
         mainText={
             <>
-              Лейла Саидова <br />(Азербайджан)
+              Татьяна Шевчук <br />(Казахстан)
             </>
           }
-        secondaryText="Косметолог, основатель сети салонов красоты"
+        secondaryText="Судья Международной категории в Nail чемпионатах."
       />
         <BoardMembers
-        imageSrc={BoardMembersImage1}
+        imageSrc={BoardMembersImage8}
         mainText={
             <>
-              Армине Аветисян <br />(Армения)
+              Ольга Саламатова <br />(Россия)
             </>
           }
-        secondaryText="Владелица успешного центра эстетической медицины"
+        secondaryText="Создатель и руководитель учебного центра Нейл Бьюти."
       />
         <BoardMembers
-        imageSrc={BoardMembersImage1}
+        imageSrc={BoardMembersImage9}
         mainText={
             <>
-              Наталья Гордеева <br />(Беларусь)
+              Светлана Андреева <br />(Молдова)
             </>
           }
-        secondaryText="Визажистка, известная своими уникальными стилями макияжа для фотосессий и показов моды"
-      />
-              <BoardMembers
-        imageSrc={BoardMembersImage1}
-        mainText={
-            <>
-              Айгуль Исмагилова <br />(Казахстан)
-            </>
-          }
-        secondaryText="Эксперт по перманентному макияжу, основательница академии красоты"
+        secondaryText="Основатель и руководитель проекта «Мастер с Большой Буквы» в BEAUTY сферы."
       />
         <BoardMembers
-        imageSrc={BoardMembersImage1}
+        imageSrc={BoardMembersImage10}
         mainText={
             <>
-              Алена Толоконникова <br />(Киргизия)
+              Мария Налбантова <br />(Таджикистан)
             </>
           }
-        secondaryText="Мастер по наращиванию ресниц и бровей, популяризатор техник объемного макияжа"
+        secondaryText="Судья Международной категории в Nail чемпионатах."
       />
         <BoardMembers
-        imageSrc={BoardMembersImage1}
+        imageSrc={BoardMembersImage11}
         mainText={
             <>
-              Светлана Георгиева <br />(Молдова)
+              Елена Литвинова <br />(Туркменистан)
             </>
           }
-        secondaryText="Известный косметолог, владелица салона красоты и SPA-центра"
-      />
-        <BoardMembers
-        imageSrc={BoardMembersImage1}
-        mainText={
-            <>
-              Муабир Шодмонов <br />(Таджикистан)
-            </>
-          }
-        secondaryText="Специалист по мужским стрижкам и уходу за волосами, основатель студии мужской красоты"
-      />
-        <BoardMembers
-        imageSrc={BoardMembersImage1}
-        mainText={
-            <>
-              Гулбахор Халилова <br />(Туркменистан)
-            </>
-          }
-        secondaryText="Эксперт по уходу за кожей, владелица косметического бутика"
+        secondaryText="Основатель и руководитель обучающего центра Litvinovalab."
       />
                     <BoardMembers
-        imageSrc={BoardMembersImage1}
+        imageSrc={BoardMembersImage12}
         mainText={
             <>
-              Гульнара Исаева <br />(Узбекистан)
+              Дарья Дружинина <br />(Узбекистан)
             </>
           }
-        secondaryText="Успешный предприниматель в области красоты, владелица сети салонов красоты и фитнес-центров"
+        secondaryText="Директор-Инструктор Академии Danila Art."
       />
         <div className="text-center">
         <div className="page-title">Список членов Ассоциации</div>

@@ -207,7 +207,7 @@ ul {
 
 .content-details-title {
   font-family: 'Circe', sans-serif;
-  font-size: 600;
+  font-weight: 600;
   font-size: 44px;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -322,6 +322,19 @@ ul {
     font-weight: 700;
 }
 
+.articles-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 50px;
+  padding: 50px 0px;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.article-button-wrapper {
+  margin: 30px 0px;
+}
 
 /* страницы AboutUS */
 
@@ -498,7 +511,6 @@ ul {
 .person-info-container {
   display: flex;
   align-items: center;
-  width: 100%;
   margin: 0 auto;
   padding: 20px 50px 50px 100px;
 }
@@ -749,7 +761,7 @@ ul {
     font-weight: 300;
     color: #000000;
     line-height: 1.55;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .article-more {
@@ -914,14 +926,15 @@ ul {
 .contact-container {
   width: 70%;
   padding: 20px;
-  background-color: #f8f8f8;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+  border-radius: 20px;
+  border: 6px solid #fee5e1;
 }
 
 .contact-heading {
   color: #333;
+  font-family: 'Circe', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
 }
 
 .contact-details {
@@ -930,11 +943,12 @@ ul {
 
 .contact-item {
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 25px;
 }
 
 .contact-info {
   font-weight: bold;
+  color: #333;
 }
 
 /* Footer */

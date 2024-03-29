@@ -1,22 +1,25 @@
 import React, { useRef, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+
 import { Helmet } from 'react-helmet-async';
 import ArrowImg from '../img/arrow.svg'
 
 function Statute() {
 
-    const location = useLocation();
+  const initialLoad = useRef(true);
 
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    };
+  const scrollToTop = () => {
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+      });
+  };
 
-    useEffect(() => {
-        scrollToTop();
-    }, [location.pathname]);
+  useEffect(() => {
+      if (initialLoad.current) {
+          scrollToTop();
+          initialLoad.current = false;
+      }
+  }, []);
 
     const section1Ref = useRef(null);
     const section2Ref = useRef(null);

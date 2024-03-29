@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import ArrowImg from '../img/arrow.svg'
@@ -16,7 +16,7 @@ function AboutUs() {
       }
     }, [state]);
 
-    const location = useLocation();
+    const initialLoad = useRef(true);
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -26,8 +26,11 @@ function AboutUs() {
     };
 
     useEffect(() => {
-        scrollToTop();
-    }, [location.pathname]);
+        if (initialLoad.current) {
+            scrollToTop();
+            initialLoad.current = false;
+        }
+    }, []);
 
   return (
     <div className="xContent">
