@@ -176,7 +176,7 @@ ul {
 
 .main-content-wrapper {
   display: flex;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 50px 0px;
   box-sizing: border-box;
@@ -217,6 +217,7 @@ ul {
 .content-details-list {
   list-style: none;
   padding: 0;
+  font-size: 18px;
 }
 
 .arrow-icon-wrapper {
@@ -387,7 +388,7 @@ ul {
   font-family: 'Circe', Arial, sans-serif;
   font-weight: 300;
   color: #000000;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.55;
 }
 
@@ -407,7 +408,7 @@ ul {
   font-family: 'Circe', Arial, sans-serif;
   font-weight: 300;
   color: #000000;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .custom-list li::before {
@@ -921,6 +922,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .contact-container {
@@ -928,6 +930,14 @@ ul {
   padding: 20px;
   border-radius: 20px;
   border: 6px solid #fee5e1;
+}
+
+.contact-title {
+  font-family: 'Circe', sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 60px;
+  color: #333;
 }
 
 .contact-heading {
