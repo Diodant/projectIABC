@@ -18,6 +18,17 @@ import members from './members';
 
 function MembersPage() {
 
+  const boardmembersRef = useRef(null);
+  const membersRef = useRef(null);
+
+  const scrollToBoardmembers = () => {
+    boardmembersRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToMembers = () => {
+    membersRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
     const { state } = useLocation();
 
     useEffect(() => {
@@ -58,15 +69,15 @@ function MembersPage() {
         <div class="members_img">
         <div className="content-blur"></div>
     <div class="content-overlay">
-    <h1 className="main-title">Члены правления Ассоциации</h1>
-    <h1 className="main-title">Наблюдательный совет и</h1>
-    <h1 className="main-title">Список членов Ассоциации</h1>
+    <h1 className="link-title" onClick={scrollToBoardmembers}>Члены правления Ассоциации <br /> Наблюдательный совет и</h1>
+
+    <h1 className="link-title" onClick={scrollToMembers}>Список членов Ассоциации</h1>
 
     </div>
     </div>
     <div className="page-wrapper">
         <div className="text-center">
-        <div className="page-title">Члены правления Ассоциации</div>
+        <div className="page-title" ref={boardmembersRef}>Члены правления Ассоциации</div>
         </div>
 
         <BoardMembers
@@ -178,7 +189,7 @@ function MembersPage() {
         secondaryText="Директор-Инструктор Академии Danila Art."
       />
         <div className="text-center">
-        <div className="page-title">Список членов Ассоциации</div>
+        <div className="page-title" ref={membersRef}>Список членов Ассоциации</div>
         </div>
         <table className="table">
                     <thead>
