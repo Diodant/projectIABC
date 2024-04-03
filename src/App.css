@@ -47,7 +47,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90px;
+  height: 120px;
   background-color: #fee5e1;
   position: fixed;
   top: 0;
@@ -67,7 +67,7 @@ ul {
   padding: 0 10px;
   font-family: 'Circe', sans-serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 20px;
   text-transform: uppercase;
 }
 
@@ -76,7 +76,8 @@ ul {
 }
 
 .navigation-logo img {
-  height: 50px;
+  width: 100px;
+  height: auto;
 }
 
 .navigation-menu a {
@@ -370,6 +371,7 @@ ul {
   font-family: 'Circe', sans-serif;
   font-weight: bold;
   font-size: 48px;
+  color: #333;
   margin: 20px 0px 50px 0px;
 }
 
@@ -388,7 +390,7 @@ ul {
   font-family: 'Circe', Arial, sans-serif;
   font-weight: 300;
   color: #000000;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 1.55;
 }
 
@@ -408,7 +410,7 @@ ul {
   font-family: 'Circe', Arial, sans-serif;
   font-weight: 300;
   color: #000000;
-  font-size: 24px;
+  font-size: 28px;
 }
 
 .custom-list li::before {
@@ -615,7 +617,7 @@ ul {
   font-family: 'Circe', Arial, sans-serif;
   font-weight: 600;
   color: #333;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 1.55;
 }
 
@@ -914,6 +916,30 @@ ul {
     line-height: 1.55;
 }
 
+/* Awards */
+
+.awards_img {
+  position: relative;
+  background-image: url('./img/awardsImg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  padding: 300px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.awards-title {
+  font-family: 'Circe', sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #333;
+}
+
 /* Contacts */
 
 .contact-wrapper{
@@ -990,7 +1016,7 @@ ul {
   color: #000;
   margin: 0 10px;
   font-family: 'Circe', sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   transition: color 0.3s ease;
 }
 

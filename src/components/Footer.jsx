@@ -1,19 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LogoImg from '../img/logo.png'
 
 const Footer = () => {
     return (
         <div className="footer-container">
           <div className="footer-logo">
-            <img src="https://static.tildacdn.com/tild3762-3533-4938-b337-313361633639/IMG_3445.PNG" alt="Футер логотип" />
+          <Link to="/"><img src={LogoImg} alt="Футер логотип" /></Link>
           </div>
           <div className="footer-links">
-            <a href="#privacy">Политика конфиденциальности</a>
-            <a href="#terms">Условия использования</a>
-            <a href="#about">О нас</a>
-            <a href="#partners">Партнёры</a>
-            <a href="#careers">Карьера</a>
-            <a href="#contact">Контакты</a>
+          <Link to="/about-us">О IABC</Link>
+          <Link to="/members">Члены Ассоциации</Link>
+          <Link to="/awards">Награды </Link>
+          <Link to="/documents">Документы</Link>
+        <Link to="/articles">Публикации</Link>
+        <Link to="/contacts">Контакты</Link>
           </div>
         </div>
       );
