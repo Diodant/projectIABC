@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import ArrowImg from '../img/arrow.svg'
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import order_members from './order_members';
 
 
 function Awards() {
@@ -82,7 +83,7 @@ function Awards() {
         <p className="page-text">Ежегодное вручение Орденов "За заслуги в индустрии красоты" становится значимым событием для профессионального сообщества мастеров красоты из различных стран СНГ, включая Россию, Украину, Азербайджан, Армению, Беларусь, Казахстан, Киргизию, Молдову, Таджикистан, Туркменистан, Узбекистан и Грузию. Эти награды признают самые значимые достижения в индустрии красоты и ухода за собой на просторах СНГ.</p>
         <div className='content-details-button'>
         <Link to={{
-          pathname: "/statute",
+          pathname: "/order",
           }}>
           <button className="main-content-button">Подробнее</button>
           </Link>
@@ -109,7 +110,7 @@ function Awards() {
         </ul>
         <div className='content-details-button'>
         <Link to={{
-          pathname: "/statute",
+          pathname: "/statutepage",
           }}>
           <button className="main-content-button">Подробнее</button>
           </Link>
@@ -117,7 +118,26 @@ function Awards() {
         <div className="text-center pt-100">
         <div className="page-title" ref={korderRef}>Кавалеры ордена</div>
         <div className="awards-title">Кавалеры ордена «Международный орден за заслуги в сфере красоты»</div>
+        <table className="table">
+                    <thead>
+                        <tr>
+                            <th>ФИО</th>
+                            <th>Страна</th>
+                            <th>Достижения</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {order_members.map((order_member, index) => (
+                            <tr key={index}>
+                                <td>{order_member.name}</td>
+                                <td>{order_member.country}</td>
+                                <td>{order_member.achievements}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
         </div>
+
     </div>
     </div>
   );
