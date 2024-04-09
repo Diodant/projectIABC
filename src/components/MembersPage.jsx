@@ -209,6 +209,7 @@ function MembersPage() {
         <div className="text-center">
         <div className="page-title" ref={membersRef}>Список членов Ассоциации</div>
         </div>
+
         <div className="table-responsive">
         <table className={`table ${animating ? 'table-animate-exit-active' : ''}`}>
           <thead>
@@ -235,14 +236,14 @@ function MembersPage() {
           disabled={currentPage <= 1}
           aria-label="Previous"
         >
-          &#10094; {/* Символ Unicode для стрелки влево */}
+          &#10094;
         </button>
         <button
           onClick={() => paginate(currentPage + 1)}
           disabled={currentPage >= totalPages}
           aria-label="Next"
         >
-          &#10095; {/* Символ Unicode для стрелки вправо */}
+          &#10095;
         </button>
       </div>
         </div>
