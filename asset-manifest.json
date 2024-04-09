@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/projectIABC/static/css/main.2cf71b41.css",
-    "main.js": "/projectIABC/static/js/main.c2ef5017.js",
+    "main.js": "/projectIABC/static/js/main.2f6a86bd.js",
     "static/js/453.28496ea1.chunk.js": "/projectIABC/static/js/453.28496ea1.chunk.js",
     "static/media/members.jpg": "/projectIABC/static/media/members.1622e72e3443785ce3f0.jpg",
     "static/media/documentsimg.jpg": "/projectIABC/static/media/documentsimg.17513f8038e5eac68d56.jpg",
@@ -59,11 +59,11 @@
     "static/media/members-svg.svg": "/projectIABC/static/media/members-svg.c9ce3f824f89ecc5aeb972eaec20f22a.svg",
     "static/media/arrow.svg": "/projectIABC/static/media/arrow.b70b257eb0a1c65e6734f3028e783fb0.svg",
     "main.2cf71b41.css.map": "/projectIABC/static/css/main.2cf71b41.css.map",
-    "main.c2ef5017.js.map": "/projectIABC/static/js/main.c2ef5017.js.map",
+    "main.2f6a86bd.js.map": "/projectIABC/static/js/main.2f6a86bd.js.map",
     "453.28496ea1.chunk.js.map": "/projectIABC/static/js/453.28496ea1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2cf71b41.css",
-    "static/js/main.c2ef5017.js"
+    "static/js/main.2f6a86bd.js"
   ]
 }
