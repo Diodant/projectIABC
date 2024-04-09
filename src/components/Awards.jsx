@@ -1,25 +1,43 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import ArrowImg from '../img/arrow.svg'
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import order_members from './order_members';
+import certificate_members from './certificate_members';
 
 
 function Awards() {
 
-    const orderRef = useRef(null);
-    const statuteRef = useRef(null);
-    const korderRef = useRef(null);
+  const membersPerPage = 10;
+  const [currentPage, setCurrentPage] = useState(1);
+  // Дополнительные состояния для анимации
+  const [animating, setAnimating] = useState(false);
 
-    const scrollToOrder = () => {
-      orderRef.current.scrollIntoView({ behavior: 'smooth' });
+  const indexOfLastMember = currentPage * membersPerPage;
+  const indexOfFirstMember = indexOfLastMember - membersPerPage;
+  const currentMembers = certificate_members.slice(indexOfFirstMember, indexOfLastMember);
+
+  const totalPages = Math.ceil(certificate_members.length / membersPerPage);
+
+  const paginate = (pageNumber) => {
+    if (pageNumber < 1 || pageNumber > totalPages || animating) return;
+    setAnimating(true); // Начинаем анимацию
+    setCurrentPage(pageNumber);
+    setTimeout(() => setAnimating(false), 300); // Заканчиваем анимацию после 300 мс
+  };
+
+    const certificateRef = useRef(null);
+    const statuteRef = useRef(null);
+    const certificatmRef = useRef(null);
+
+    const scrollToСertificate = () => {
+      certificateRef.current.scrollIntoView({ behavior: 'smooth' });
     };
 
     const scrollToStatute = () => {
       statuteRef.current.scrollIntoView({ behavior: 'smooth' });
     };
-    const scrollToKorder = () => {
-      korderRef.current.scrollIntoView({ behavior: 'smooth' });
+    const scrollToСertificatMember = () => {
+      certificatmRef.current.scrollIntoView({ behavior: 'smooth' });
     };
 
     const initialLoad = useRef(true);
@@ -52,17 +70,17 @@ function Awards() {
         <div className="content-blur"></div>
     <div class="content-overlay">
     <h1 className="main-title">Награды Ассоциации IABC</h1>
-    <h1 className="link-title" onClick={scrollToOrder}>Орден</h1>
+    <h1 className="link-title" onClick={scrollToСertificate}>Сертификат</h1>
     <h1 className="link-title" onClick={scrollToStatute}>Статут</h1>
-    <h1 className="link-title" onClick={scrollToKorder}>Кавалеры ордена</h1>
+    <h1 className="link-title" onClick={scrollToСertificatMember}>Обладатели Международного Сертификата</h1>
     </div>
     </div>
     <div className="documents-wrapper">
     <div className="text-center">
-        <div className="page-title" ref={orderRef}>Орден </div>
-        <div className="awards-title">“Международный Орден за заслуги в индустрии красоты”</div>
+        <div className="page-title" ref={certificateRef}>Сертификат</div>
+        <div className="awards-title">“Международный Сертификат за заслуги в индустрии красоты”</div>
         </div>
-        <p className="page-text">Орден "За заслуги в индустрии красоты" вручается выдающимся мастерам красоты за личные высокие достижения, которые оказали значительное влияние на развитие и прогресс индустрии красоты как в своих странах, так и за их пределами. Личные достижения могут включать в себя:</p>
+        <p className="page-text">Сертификат "За заслуги в индустрии красоты" вручается выдающимся мастерам красоты за личные высокие достижения, которые оказали значительное влияние на развитие и прогресс индустрии красоты как в своих странах, так и за их пределами. Личные достижения могут включать в себя:</p>
         <ul className="content-details-list page-text">
           <li>  <span class="arrow-icon-wrapper">
           <img src={ArrowImg} className="my-icon-style" alt="ArrowImg" />
@@ -80,10 +98,10 @@ function Awards() {
           <img src={ArrowImg} className="my-icon-style" alt="ArrowImg" />
             </span>Признание в индустрии красоты за соблюдение высоких этических стандартов, профессионализм и прозрачность в работе</li>
         </ul>
-        <p className="page-text">Ежегодное вручение Орденов "За заслуги в индустрии красоты" становится значимым событием для профессионального сообщества мастеров красоты из различных стран СНГ, включая Россию, Украину, Азербайджан, Армению, Беларусь, Казахстан, Киргизию, Молдову, Таджикистан, Туркменистан, Узбекистан и Грузию. Эти награды признают самые значимые достижения в индустрии красоты и ухода за собой на просторах СНГ.</p>
+        <p className="page-text">Ежегодное вручение Сертификата "За заслуги в индустрии красоты" становится значимым событием для профессионального сообщества мастеров красоты из различных стран СНГ, включая Россию, Украину, Азербайджан, Армению, Беларусь, Казахстан, Киргизию, Молдову, Таджикистан, Туркменистан, Узбекистан и Грузию. Эти награды признают самые значимые достижения в индустрии красоты и ухода за собой на просторах СНГ.</p>
         <div className='content-details-button'>
         <Link to={{
-          pathname: "/order",
+          pathname: "/certificate",
           }}>
           <button className="main-content-button">Подробнее</button>
           </Link>
@@ -116,26 +134,44 @@ function Awards() {
           </Link>
         </div>
         <div className="text-center pt-100">
-        <div className="page-title" ref={korderRef}>Кавалеры ордена</div>
-        <div className="awards-title">Кавалеры ордена «Международный орден за заслуги в сфере красоты»</div>
-        <table className="table">
-                    <thead>
-                        <tr>
-                            <th>ФИО</th>
-                            <th>Страна</th>
-                            <th>Достижения</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {order_members.map((order_member, index) => (
-                            <tr key={index}>
-                                <td>{order_member.name}</td>
-                                <td>{order_member.country}</td>
-                                <td>{order_member.achievements}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+        <div className="page-title" ref={certificatmRef}>Обладатели Международного Сертификата</div>
+        <div className="awards-title">За заслуги в индустрии красот</div>
+        <div className="table-responsive">
+        <table className={`table ${animating ? 'table-animate-exit-active' : ''}`}>
+          <thead>
+            <tr>
+              <th>ФИО</th>
+              <th>Страна</th>
+              <th>Достижения</th>
+            </tr>
+          </thead>
+          <tbody>
+          {currentMembers.map((certificate_member, index) => (
+                <tr key={index}>
+                    <td>{certificate_member.name}</td>
+                    <td>{certificate_member.country}</td>
+                    <td>{certificate_member.achievements}</td>
+                </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className="pagination-controls">
+        <button
+          onClick={() => paginate(currentPage - 1)}
+          disabled={currentPage <= 1}
+          aria-label="Previous"
+        >
+          &#10094;
+        </button>
+        <button
+          onClick={() => paginate(currentPage + 1)}
+          disabled={currentPage >= totalPages}
+          aria-label="Next"
+        >
+          &#10095;
+        </button>
+      </div>
         </div>
 
     </div>

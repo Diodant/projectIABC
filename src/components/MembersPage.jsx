@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import BoardMembers from './BoardMembers';
@@ -17,6 +17,24 @@ import BoardMembersImage12 from '../img/BoardMembers/boardmember12.jpg';
 import members from './members';
 
 function MembersPage() {
+
+  const membersPerPage = 10;
+  const [currentPage, setCurrentPage] = useState(1);
+  // Дополнительные состояния для анимации
+  const [animating, setAnimating] = useState(false);
+
+  const indexOfLastMember = currentPage * membersPerPage;
+  const indexOfFirstMember = indexOfLastMember - membersPerPage;
+  const currentMembers = members.slice(indexOfFirstMember, indexOfLastMember);
+
+  const totalPages = Math.ceil(members.length / membersPerPage);
+
+  const paginate = (pageNumber) => {
+    if (pageNumber < 1 || pageNumber > totalPages || animating) return;
+    setAnimating(true); // Начинаем анимацию
+    setCurrentPage(pageNumber);
+    setTimeout(() => setAnimating(false), 300); // Заканчиваем анимацию после 300 мс
+  };
 
   const boardmembersRef = useRef(null);
   const membersRef = useRef(null);
@@ -191,24 +209,42 @@ function MembersPage() {
         <div className="text-center">
         <div className="page-title" ref={membersRef}>Список членов Ассоциации</div>
         </div>
-        <table className="table">
-                    <thead>
-                        <tr>
-                            <th>ФИО</th>
-                            <th>Страна</th>
-                            <th>Достижения</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {members.map((member, index) => (
-                            <tr key={index}>
-                                <td>{member.name}</td>
-                                <td>{member.country}</td>
-                                <td>{member.achievements}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+        <div className="table-responsive">
+        <table className={`table ${animating ? 'table-animate-exit-active' : ''}`}>
+          <thead>
+            <tr>
+              <th>ФИО</th>
+              <th>Страна</th>
+              <th>Достижения</th>
+            </tr>
+          </thead>
+          <tbody>
+            {currentMembers.map((member, index) => (
+              <tr key={index}>
+                <td>{member.name}</td>
+                <td>{member.country}</td>
+                <td>{member.achievements}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className="pagination-controls">
+        <button
+          onClick={() => paginate(currentPage - 1)}
+          disabled={currentPage <= 1}
+          aria-label="Previous"
+        >
+          &#10094; {/* Символ Unicode для стрелки влево */}
+        </button>
+        <button
+          onClick={() => paginate(currentPage + 1)}
+          disabled={currentPage >= totalPages}
+          aria-label="Next"
+        >
+          &#10095; {/* Символ Unicode для стрелки вправо */}
+        </button>
+      </div>
         </div>
     </div>
   );

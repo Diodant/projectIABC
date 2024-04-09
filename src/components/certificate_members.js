@@ -1,4 +1,4 @@
-const order_members = [
+const certificate_members = [
     {
       name: "Ольга Лунина",
       country: "Россия",
@@ -131,4 +131,4 @@ const order_members = [
     },
   ];
 
- export default order_members;
+ export default certificate_members;
