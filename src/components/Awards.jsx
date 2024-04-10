@@ -78,7 +78,7 @@ function Awards() {
     <div className="documents-wrapper">
     <div className="text-center">
         <div className="page-title" ref={certificateRef}>Сертификат</div>
-        <div className="awards-title">“Международный Сертификат за заслуги в индустрии красоты”</div>
+        <div className="awards-title">Международный Сертификат “за заслуги в индустрии красоты”</div>
         </div>
         <p className="page-text">Сертификат "За заслуги в индустрии красоты" вручается выдающимся мастерам красоты за личные высокие достижения, которые оказали значительное влияние на развитие и прогресс индустрии красоты как в своих странах, так и за их пределами. Личные достижения могут включать в себя:</p>
         <ul className="content-details-list page-text">

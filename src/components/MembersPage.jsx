@@ -87,7 +87,7 @@ function MembersPage() {
         <div class="members_img">
         <div className="content-blur"></div>
     <div class="content-overlay">
-    <h1 className="link-title" onClick={scrollToBoardmembers}>Члены правления Ассоциации <br /> Наблюдательный совет и</h1>
+    <h1 className="link-title" onClick={scrollToBoardmembers}>Члены правления Ассоциации</h1>
 
     <h1 className="link-title" onClick={scrollToMembers}>Список членов Ассоциации</h1>
 
