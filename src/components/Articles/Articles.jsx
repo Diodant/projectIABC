@@ -42,9 +42,9 @@ function Articles() {
         <title>СТАТЬИ</title>
         <meta
         name="description"
-        content="Международная Ассоциация Красоты и Ухода (International Association of Beauty and Care) является престижным объединением ведущих специалистов в области красоты и ухода"
+        content="Статьи Международной Ассоциации Красоты и Ухода (International Association of Beauty and Care) IABC"
         />
-        <link rel="canonical" href="/about-us"/>
+        <link rel="canonical" href="https://iabc-association.com/articles"/>
       </Helmet>
         <div class="articles_img">
         <div className="content-blur"></div>

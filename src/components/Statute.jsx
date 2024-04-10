@@ -52,7 +52,7 @@ function Statute() {
         name="description"
         content="Устав Международной Ассоциацией Красоты и Ухода (International Association of Beauty and Care) IABC"
         />
-        <link rel="canonical" href="/statute"/>
+        <link rel="canonical" href="https://iabc-association.com/statute"/>
       </Helmet>
     <div className="documents-wrapper mt">
     <div className="text-center">

@@ -82,7 +82,7 @@ function MembersPage() {
         name="description"
         content="Члены правления Международной Ассоциацией Красоты и Ухода (International Association of Beauty and Care) и список членов Ассоциации IABC"
         />
-        <link rel="canonical" href="/members"/>
+        <link rel="canonical" href="https://iabc-association.com/members"/>
       </Helmet>
         <div class="members_img">
         <div className="content-blur"></div>

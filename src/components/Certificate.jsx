@@ -31,7 +31,7 @@ function Certificate() {
         name="description"
         content='Сертификат "За заслуги в индустрии красоты" вручается выдающимся мастерам красоты за личные высокие достижения, которые оказали значительное влияние на развитие и прогресс индустрии красоты в своих странах'
         />
-        <link rel="canonical" href="/certificate"/>
+        <link rel="canonical" href="https://iabc-association.com/certificate"/>
       </Helmet>
     <div className="documents-wrapper mt">
     <div className="text-center">

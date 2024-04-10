@@ -40,7 +40,7 @@ function Documents() {
         name="description"
         content="Документы Международной Ассоциацией Красоты и Ухода (International Association of Beauty and Care) IABC"
         />
-        <link rel="canonical" href="/documents"/>
+        <link rel="canonical" href="https://iabc-association.com/documents"/>
       </Helmet>
       <div class="documents_img">
         <div className="content-blur"></div>

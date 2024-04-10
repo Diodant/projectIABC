@@ -1,8 +1,17 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 function Contacts() {
   return (
     <div className="contact-wrapper">
+          <Helmet>
+        <title>Контакты Ассоциации IABC</title>
+        <meta
+        name="description"
+        content='Контакты Международной Ассоциацией Красоты и Ухода (International Association of Beauty and Care) IABC'
+        />
+        <link rel="canonical" href="https://iabc-association.com/contacts"/>
+      </Helmet>
           <div className="text-center">
         <div id="our-statute" className="contact-title" >Некоммерческая организация Международная Ассоциация Красоты и Ухода</div>
 

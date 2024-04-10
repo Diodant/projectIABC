@@ -24,12 +24,12 @@ function StatutePage() {
   return (
     <div>
     <Helmet>
-        <title>Почетного вручения сертификата «За заслуги в индустрии красоты»</title>
+        <title>Статут «За заслуги в индустрии красоты»</title>
         <meta
         name="description"
-        content="Почетного вручения сертификата «За заслуги в индустрии красоты» является высшей наградой Некоммерческой организации Международной Ассоциации Красоты и Ухода"
+        content="Статут почетного вручения сертификата «За заслуги в индустрии красоты» является высшей наградой Некоммерческой организации Международной Ассоциации Красоты и Ухода"
         />
-        <link rel="canonical" href="/statutepage"/>
+        <link rel="canonical" href="https://iabc-association.com/statutepage"/>
       </Helmet>
     <div className="documents-wrapper mt">
         <div className="text-center">

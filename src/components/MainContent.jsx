@@ -1,6 +1,7 @@
 import CountUp from 'react-countup';
 import React, { useEffect, useRef } from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import articlesData from '../components/Articles/articlesData';
 import ColumnImg from '../img/columnimg.jpg'
@@ -40,6 +41,14 @@ const MainContent = () => {
 
     return (
         <div>
+        <Helmet>
+        <title>Международная Ассоциация профессионалов индустрии Красоты и Ухода</title>
+        <meta
+        name="description"
+        content="Международная Ассоциация Красоты и Ухода (International Association of Beauty and Care) является престижным объединением ведущих специалистов в области красоты IABC"
+        />
+        <link rel="canonical" href="https://iabc-association.com/"/>
+      </Helmet>
       <div className="main-content">
         <div className="content-blur"></div>
         <div className="content-overlay">

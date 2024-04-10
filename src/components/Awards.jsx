@@ -62,9 +62,9 @@ function Awards() {
         <title>Награды Ассоциации IABC</title>
         <meta
         name="description"
-        content="Документы Международной Ассоциацией Красоты и Ухода (International Association of Beauty and Care) IABC"
+        content="Награды Международной Ассоциацией Красоты и Ухода (International Association of Beauty and Care) IABC"
         />
-        <link rel="canonical" href="/awards"/>
+        <link rel="canonical" href="https://iabc-association.com/awards"/>
       </Helmet>
       <div class="awards_img">
         <div className="content-blur"></div>
