@@ -46,7 +46,11 @@ const MainContent = () => {
           <h1 className="main-title">МЕЖДУНАРОДНАЯ АССОЦИАЦИЯ</h1>
           <h1 className="main-title">профессионалов индустрии Красоты и Ухода</h1>
           <h2 className="main-subtitle">IABC</h2>
+          <Link to={{
+          pathname: "/form",
+          }}>
           <button className="join-button">ВСТУПИТЬ</button>
+          </Link>
         </div>
       </div>
       <div className="main-content-wrapper">

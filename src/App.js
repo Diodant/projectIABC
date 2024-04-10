@@ -11,6 +11,7 @@ import StatutePage from './components/StatutePage';
 import Certificate from './components/Certificate';
 import Articles from './components/Articles/Articles';
 import ArticlesPage from './components/Articles/ArticlePage';
+import Form from './components/Form';
 import Contacts from './components/Contacts';
 import Footer from './components/Footer';
 import './App.css';
@@ -33,6 +34,7 @@ function App() {
         <Route path="/statute" element={<Statute />} />
         <Route path="/awards" element={<Awards />} />
         <Route path="/certificate" element={<Certificate />} />
+        <Route path="/form" element={<Form />} />
         <Route path="/statutepage" element={<StatutePage />} />
         <Route path="/contacts" element={<Contacts />} />
         </Routes>
