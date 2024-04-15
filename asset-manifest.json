@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/projectIABC/static/css/main.e9a84407.css",
-    "main.js": "/projectIABC/static/js/main.29f8afee.js",
+    "main.js": "/projectIABC/static/js/main.6d8ccfb1.js",
     "static/js/453.28496ea1.chunk.js": "/projectIABC/static/js/453.28496ea1.chunk.js",
     "static/media/members.jpg": "/projectIABC/static/media/members.1622e72e3443785ce3f0.jpg",
     "static/media/documentsimg.jpg": "/projectIABC/static/media/documentsimg.17513f8038e5eac68d56.jpg",
     "static/media/aboutusimg.jpg": "/projectIABC/static/media/aboutusimg.b914478547cea3f5a51c.jpg",
+    "static/media/medal.png": "/projectIABC/static/media/medal.32c59d124016556e1470.png",
     "static/media/awardsImg.jpg": "/projectIABC/static/media/awardsImg.8d6cd546b63af969616b.jpg",
-    "static/media/certificate.jpg": "/projectIABC/static/media/certificate.afdd62cdd4155521e487.jpg",
     "static/media/Circe-ExtraLight.eot": "/projectIABC/static/media/Circe-ExtraLight.0f3ca43ce4ca34c99c00.eot",
     "static/media/Circe-ExtraLight.ttf": "/projectIABC/static/media/Circe-ExtraLight.d95151f8b96ed97a9681.ttf",
     "static/media/Circe-Thin.eot": "/projectIABC/static/media/Circe-Thin.00bb023a19a35602c7fa.eot",
@@ -59,11 +59,11 @@
     "static/media/members-svg.svg": "/projectIABC/static/media/members-svg.c9ce3f824f89ecc5aeb972eaec20f22a.svg",
     "static/media/arrow.svg": "/projectIABC/static/media/arrow.b70b257eb0a1c65e6734f3028e783fb0.svg",
     "main.e9a84407.css.map": "/projectIABC/static/css/main.e9a84407.css.map",
-    "main.29f8afee.js.map": "/projectIABC/static/js/main.29f8afee.js.map",
+    "main.6d8ccfb1.js.map": "/projectIABC/static/js/main.6d8ccfb1.js.map",
     "453.28496ea1.chunk.js.map": "/projectIABC/static/js/453.28496ea1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e9a84407.css",
-    "static/js/main.29f8afee.js"
+    "static/js/main.6d8ccfb1.js"
   ]
 }
