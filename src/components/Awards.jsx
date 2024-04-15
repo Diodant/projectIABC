@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import ArrowImg from '../img/arrow.svg'
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import certificate_members from './certificate_members';
+import certificate_members from './order_members';
 
 
 function Awards() {
@@ -25,18 +25,18 @@ function Awards() {
     setTimeout(() => setAnimating(false), 300); // Заканчиваем анимацию после 300 мс
   };
 
-    const certificateRef = useRef(null);
+    const orderRef = useRef(null);
     const statuteRef = useRef(null);
     const certificatmRef = useRef(null);
 
-    const scrollToСertificate = () => {
-      certificateRef.current.scrollIntoView({ behavior: 'smooth' });
+    const scrollToOrder = () => {
+      orderRef.current.scrollIntoView({ behavior: 'smooth' });
     };
 
     const scrollToStatute = () => {
       statuteRef.current.scrollIntoView({ behavior: 'smooth' });
     };
-    const scrollToСertificatMember = () => {
+    const scrollToCertificateMember = () => {
       certificatmRef.current.scrollIntoView({ behavior: 'smooth' });
     };
 
@@ -70,17 +70,17 @@ function Awards() {
         <div className="content-blur"></div>
     <div class="content-overlay">
     <h1 className="main-title">Награды Ассоциации IABC</h1>
-    <h1 className="link-title" onClick={scrollToСertificate}>Сертификат</h1>
+    <h1 className="link-title" onClick={scrollToOrder}>Медаль</h1>
     <h1 className="link-title" onClick={scrollToStatute}>Статут</h1>
-    <h1 className="link-title" onClick={scrollToСertificatMember}>Обладатели Международного Сертификата</h1>
+    <h1 className="link-title" onClick={scrollToCertificateMember}>Обладатели медали</h1>
     </div>
     </div>
     <div className="documents-wrapper">
     <div className="text-center">
-        <div className="page-title" ref={certificateRef}>Сертификат</div>
-        <div className="awards-title">Международный Сертификат “за заслуги в индустрии красоты”</div>
+        <div className="page-title" ref={orderRef}>Медаль</div>
+        <div className="awards-title">Медаль “За заслуги в индустрии красоты”</div>
         </div>
-        <p className="page-text">Сертификат "За заслуги в индустрии красоты" вручается выдающимся мастерам красоты за личные высокие достижения, которые оказали значительное влияние на развитие и прогресс индустрии красоты как в своих странах, так и за их пределами. Личные достижения могут включать в себя:</p>
+        <p className="page-text">Медаль "За заслуги в индустрии красоты" вручается выдающимся мастерам красоты за личные высокие достижения, которые оказали значительное влияние на развитие и прогресс индустрии красоты как в своих странах, так и за их пределами. Личные достижения могут включать в себя:</p>
         <ul className="content-details-list page-text">
           <li>  <span class="arrow-icon-wrapper">
           <img src={ArrowImg} className="my-icon-style" alt="ArrowImg" />
@@ -98,27 +98,27 @@ function Awards() {
           <img src={ArrowImg} className="my-icon-style" alt="ArrowImg" />
             </span>Признание в индустрии красоты за соблюдение высоких этических стандартов, профессионализм и прозрачность в работе</li>
         </ul>
-        <p className="page-text">Ежегодное вручение Сертификата "За заслуги в индустрии красоты" становится значимым событием для профессионального сообщества мастеров красоты из различных стран СНГ, включая Россию, Украину, Азербайджан, Армению, Беларусь, Казахстан, Киргизию, Молдову, Таджикистан, Туркменистан, Узбекистан и Грузию. Эти награды признают самые значимые достижения в индустрии красоты и ухода за собой на просторах СНГ.</p>
+        <p className="page-text">Ежегодное вручение Медали "За заслуги в индустрии красоты" становится значимым событием для профессионального сообщества мастеров красоты из различных стран СНГ, включая Россию, Украину, Азербайджан, Армению, Беларусь, Казахстан, Киргизию, Молдову, Таджикистан, Туркменистан, Узбекистан и Грузию. Эти награды признают самые значимые достижения в индустрии красоты и ухода за собой на просторах СНГ.</p>
         <div className='content-details-button'>
         <Link to={{
-          pathname: "/certificate",
+          pathname: "/medal",
           }}>
           <button className="main-content-button">Подробнее</button>
           </Link>
         </div>
         <div className="text-center pt-100">
         <div className="page-title" ref={statuteRef}>СТАТУТ</div>
-        <div className="awards-title">Почетного вручения сертификата «За заслуги в индустрии красоты»</div>
+        <div className="awards-title">Почетного вручения медали «За заслуги в индустрии красоты»</div>
         </div>
-        <p className="page-text">Отличительный сертификат «За заслуги в индустрии красоты» является высшей наградой Некоммерческой организации Международной Ассоциации Красоты и Ухода</p>
-        <p className="page-subtext">Отличительным сертификатом «За заслуги в индустрии красоты» награждаются мастера за:</p>
+        <p className="page-text">Отличительная медаль «За заслуги в индустрии красоты» является высшей наградой Некоммерческой организации Международной Ассоциации Красоты и Ухода</p>
+        <p className="page-subtext">Отличительной медалью «За заслуги в индустрии красоты» награждаются мастера за</p>
         <ul class="custom-list">
           <li>Высокий профессионализм в сфере красоты;</li>
           <li>Активную и результативную деятельность в распространении и развитии индустрии красоты;</li>
           <li>Значительный вклад в развитие и популяризацию красоты как научной области или практического опыта в индивидуальных и коммерческих проектах;</li>
           <li>Значимый личный вклад в развитие социально-ориентированного рынка красоты.</li>
         </ul>
-        <p className="page-subtext">Награждение сертификатом «За заслуги в индустрии красоты» происходит в следующих областях:</p>
+        <p className="page-subtext">Награждение медалью «За заслуги в индустрии красоты» происходит в следующих областях:</p>
         <ul class="custom-list">
           <li>Инновации в индустрии красоты</li>
           <li>Лидерство в создании образов</li>
@@ -134,23 +134,25 @@ function Awards() {
           </Link>
         </div>
         <div className="text-center pt-100">
-        <div className="page-title" ref={certificatmRef}>Обладатели Международного Сертификата</div>
-        <div className="awards-title">За заслуги в индустрии красоты</div>
+        <div className="page-title" ref={certificatmRef}>Обладатели медали</div>
+        <div className="awards-title">«За заслуги в сфере красоты»</div>
         <div className="table-responsive">
         <table className={`table ${animating ? 'table-animate-exit-active' : ''}`}>
           <thead>
             <tr>
               <th>ФИО</th>
               <th>Страна</th>
+              <th>Год</th>
               <th>Достижения</th>
             </tr>
           </thead>
           <tbody>
-          {currentMembers.map((certificate_member, index) => (
+          {currentMembers.map((order_member, index) => (
                 <tr key={index}>
-                    <td>{certificate_member.name}</td>
-                    <td>{certificate_member.country}</td>
-                    <td>{certificate_member.achievements}</td>
+                    <td>{order_member.name}</td>
+                    <td>{order_member.country}</td>
+                    <td>{order_member.year}</td>
+                    <td>{order_member.achievements}</td>
                 </tr>
             ))}
           </tbody>

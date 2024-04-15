@@ -8,7 +8,7 @@ import Documents from './components/Documents';
 import Statute from './components/Statute';
 import Awards from './components/Awards';
 import StatutePage from './components/StatutePage';
-import Certificate from './components/Certificate';
+import Medal from './components/Medal';
 import Articles from './components/Articles/Articles';
 import ArticlesPage from './components/Articles/ArticlePage';
 import Form from './components/Form';
@@ -33,7 +33,7 @@ function App() {
         <Route path="/articles/:slug" element={<ArticlesPage />} />
         <Route path="/statute" element={<Statute />} />
         <Route path="/awards" element={<Awards />} />
-        <Route path="/certificate" element={<Certificate />} />
+        <Route path="/medal" element={<Medal />} />
         <Route path="/form" element={<Form />} />
         <Route path="/statutepage" element={<StatutePage />} />
         <Route path="/contacts" element={<Contacts />} />
