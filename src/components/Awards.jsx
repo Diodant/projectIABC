@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import ArrowImg from '../img/arrow.svg'
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import MedalImg from '../img/medal.png'
 import certificate_members from './order_members';
 
 
@@ -80,6 +81,7 @@ function Awards() {
         <div className="page-title" ref={orderRef}>Медаль</div>
         <div className="awards-title">Медаль “За заслуги в индустрии красоты”</div>
         </div>
+        <div className='medal-img'><img src={MedalImg} alt="Medal" /></div>
         <p className="page-text">Медаль "За заслуги в индустрии красоты" вручается выдающимся мастерам красоты за личные высокие достижения, которые оказали значительное влияние на развитие и прогресс индустрии красоты как в своих странах, так и за их пределами. Личные достижения могут включать в себя:</p>
         <ul className="content-details-list page-text">
           <li>  <span class="arrow-icon-wrapper">

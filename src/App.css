@@ -225,7 +225,7 @@ b {
 .content-details-list {
   list-style: none;
   padding: 0;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .arrow-icon-wrapper {
@@ -348,7 +348,7 @@ b {
 /* страницы AboutUS */
 
 .page-wrapper {
-  padding: 30px 80px 60px 80px;
+  padding: 30px 200px 60px 200px;
 }
 
 .text-center {
@@ -656,7 +656,7 @@ b {
 }
 
 .documents-wrapper {
-  padding: 30px 100px 60px 100px;
+  padding: 30px 200px 60px 200px;
 }
 
 .documents-wrapper p:not(:last-child) {
@@ -999,15 +999,15 @@ b {
   color: #333;
 }
 
-.certificate-img {
+.medal-img {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px 0px 50px 0px;
 }
 
-.certificate-img img{
-    width: 800px;
+.medal-img img{
+    width: 600px;
     height: auto;
 }
 

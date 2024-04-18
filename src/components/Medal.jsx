@@ -38,7 +38,7 @@ function Medal() {
         <div className="page-title">Медаль</div>
         <div className="awards-title">Медаль "За заслуги в индустрии красоты"</div>
         </div>
-        <div className='certificate-img'><img src={MedalImg} alt="Medal" /></div>
+        <div className='medal-img'><img src={MedalImg} alt="Medal" /></div>
         <p className="page-text">Медаль "За заслуги в индустрии красоты" вручается выдающимся мастерам красоты за личные высокие достижения, которые оказали значительное влияние на развитие и прогресс индустрии красоты как в своих странах, так и за их пределами. Личные достижения могут включать в себя:</p>
         <ul className="content-details-list page-text">
           <li>  <span class="arrow-icon-wrapper">
