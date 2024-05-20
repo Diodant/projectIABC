@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import BoardMembers from './BoardMembers';
-import BoardMembersImage1 from '../img/BoardMembers/boardmember1.jpg';
+import BoardMembersImage1 from '../img/BoardMembers/boardmember1.png';
 import BoardMembersImage2 from '../img/BoardMembers/boardmember2.jpg';
 import BoardMembersImage3 from '../img/BoardMembers/boardmember3.jpg';
 import BoardMembersImage4 from '../img/BoardMembers/boardmember4.jpg';
@@ -14,6 +14,7 @@ import BoardMembersImage9 from '../img/BoardMembers/boardmember9.jpg';
 import BoardMembersImage10 from '../img/BoardMembers/boardmember10.jpg';
 import BoardMembersImage11 from '../img/BoardMembers/boardmember11.jpg';
 import BoardMembersImage12 from '../img/BoardMembers/boardmember12.jpg';
+import BoardMembersImage13 from '../img/BoardMembers/boardmember13.png';
 import members from './members';
 
 function MembersPage() {
@@ -102,7 +103,7 @@ function MembersPage() {
         imageSrc={BoardMembersImage1}
         mainText={
             <>
-              Ольга Лунина <br />(Россия)
+              Елена Шанская <br />(Россия)
             </>
           }
         secondaryText="Президент IABC"
@@ -111,10 +112,19 @@ function MembersPage() {
         imageSrc={BoardMembersImage2}
         mainText={
             <>
-              Екатерина Слепухина <br />(Россия)
+              Инна Городнова <br />(Россия)
             </>
           }
         secondaryText="Заместитель Президента по общим вопросам"
+      />
+              <BoardMembers
+        imageSrc={BoardMembersImage13}
+        mainText={
+            <>
+              Екатерина Мирошниченко <br />(Украина)
+            </>
+          }
+        secondaryText="Автор и разработчик уникальных курсов и технологий модного маникюра"
       />
         <BoardMembers
         imageSrc={BoardMembersImage3}

@@ -1067,12 +1067,12 @@ b {
 }
 
 .form-input {
-  padding: 12px 20px; /* Больше паддинг для удобства ввода */
-  border: 2px solid #ced4da; /* Толще и светлее граница */
-  border-radius: 5px; /* Меньше скругление для современного вида */
-  font-size: 16px; /* Побольше шрифт */
-  background-color: #f8f9fa; /* Светлый фон для инпута */
-  transition: border-color 0.2s ease-in-out; /* Плавное изменение цвета границы */
+  padding: 12px 20px;
+  border: 2px solid #ced4da;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f8f9fa;
+  transition: border-color 0.2s ease-in-out;
 }
 
 .form-input:focus {

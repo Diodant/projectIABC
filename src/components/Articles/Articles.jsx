@@ -39,7 +39,7 @@ function Articles() {
   return (
     <div className="xContent">
         <Helmet>
-        <title>СТАТЬИ</title>
+        <title>Статьи</title>
         <meta
         name="description"
         content="Статьи Международной Ассоциации Красоты и Ухода (International Association of Beauty and Care) IABC"
