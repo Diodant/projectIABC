@@ -805,6 +805,11 @@ b {
   height: 320px;
 }
 
+.article-sub-image {
+  width: 100%;
+  padding-bottom: 60px;
+}
+
 .article-info {
   margin-top: 10px;
 }
@@ -959,10 +964,6 @@ b {
   margin-bottom: 60px;
   color: #333;
   text-align: center;
-}
-
-.articlepage-text {
-
 }
 
 .fs-35 {

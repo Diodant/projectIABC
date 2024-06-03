@@ -1,10 +1,39 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useRef } from 'react';
+import { useParams, useLocation } from 'react-router-dom';
 import articlesData from './articlesData';
 
 function ArticlePage() {
   const { slug } = useParams();
   const article = articlesData.find((r) => r.slug === slug);
+
+  const { state } = useLocation();
+
+
+
+  useEffect(() => {
+    if (state?.scrollTo) {
+      const element = document.getElementById(state.scrollTo);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [state]);
+
+  const initialLoad = useRef(true);
+
+  const scrollToTop = () => {
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+      });
+  };
+
+  useEffect(() => {
+      if (initialLoad.current) {
+          scrollToTop();
+          initialLoad.current = false;
+      }
+  }, []);
 
   if (!article) {
     return <div>Рецензия не найдена.</div>;
@@ -20,6 +49,7 @@ function ArticlePage() {
       {article.slug === 'article12' ? (
         <div className="articlepage-content">
           <p className='articlepage-text fs-35 mb-30'>{article.content1}</p>
+          <img src={article.imageUrl2} alt={article.title} className="article-sub-image" />
           <p className='fs-25'>{article.content2}</p>
           <p className='fs-25'>{article.content3}</p>
           <p className='fs-25'>{article.content4}</p>
@@ -59,6 +89,7 @@ function ArticlePage() {
             ) : article.slug === 'article13' ? (
               <div className="articlepage-content">
             <p className='articlepage-text fs-35 mb-30'>{article.content1}</p>
+            <img src={article.imageUrl2} alt={article.title} className="article-sub-image" />
           <p className='fs-25'>{article.content2}</p>
           <p className='fs-25'>{article.content3}</p>
           <p className='page-subtext'>{article.content4}</p>
@@ -92,6 +123,7 @@ function ArticlePage() {
           <li>{article.textli10}</li>
           </ul>
           <p className='fs-25'>{article.content14}</p>
+          <img src={article.imageUrl3} alt={article.title} className="article-sub-image" />
           <p className='page-subtext'>{article.content15}</p>
           <ul className='custom-list'>
           <li>{article.textli11}</li>
