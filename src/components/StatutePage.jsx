@@ -33,8 +33,14 @@ function StatutePage() {
       </Helmet>
     <div className="documents-wrapper mt">
         <div className="text-center">
-        <div className="page-title">СТАТУТ</div>
+        <div className="page-title">Устав</div>
         <div className="awards-title">Почетного вручения медали «За заслуги в индустрии красоты»</div>
+        <div className="medal-text-left">        
+        <p className="page-subtext">Утвержден Общим собранием членов Международной </p>
+        <p className="page-subtext">Ассоциации красоты и ухода "МАКУ"</p>
+        <p className="page-text">Протокол № 12 от 1 сентября  2019 года</p>
+        <p className="page-text mb-60">г. Москва</p></div>
+
         </div>
         <p className="page-text">Отличительная медаль «За заслуги в индустрии красоты» является высшей наградой Некоммерческой организации Международной Ассоциации Красоты и Ухода</p>
         <p className="page-subtext">Отличительной медалью «За заслуги в индустрии красоты» награждаются мастера за</p>

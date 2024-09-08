@@ -301,56 +301,67 @@ function ArticlePage() {
                     </div>
                     ) : article.slug === 'article19' ? (
                       <div className="articlepage-content">
-          <p className='articlepage-text fs-35 mb-30'>{article.content1}</p>
-          <p className='fs-25'>{article.content2}</p>
-          <p className='fs-25'>{article.content3}</p>
-          <p className='fs-25'>{article.content4}</p>
-          <p className='fs-25'>{article.content5}</p>
-          <ul className='custom-list'>
-            <li>{article.textli1}</li>
-            <li>{article.textli2}</li>
-            <li>{article.textli3}</li>
-            <li>{article.textli4}</li>
-            <li>{article.textli5}</li>
-          </ul>
-          <p className='fs-25'>{article.content6}</p>
-          <p className='fs-25'>{article.content7}</p>
-          <ul className='custom-list'>
-            <li>{article.textli6}</li>
-            <li>{article.textli7}</li>
-            <li>{article.textli8}</li>
-            <li>{article.textli9}</li>
-            <li>{article.textli10}</li>
-          </ul>
-          <p className='fs-25'>{article.content9}</p>
-          <p className='fs-25'>{article.content10}</p>
-          <ul className='custom-list'>
-            <li>{article.textli11}</li>
-            <li>{article.textli12}</li>
-            <li>{article.textli13}</li>
-            <li>{article.textli14}</li>
-            <li>{article.textli15}</li>
-          </ul>
-          <p className='fs-25'>{article.content12}</p>
-          <ul className='custom-list'>
-            <li>{article.textli16}</li>
-            <li>{article.textli17}</li>
-            <li>{article.textli18}</li>
-            <li>{article.textli19}</li>
-            <li>{article.textli20}</li>
-          </ul>
-          <p className='fs-25'>{article.content15}</p>
-          <ul className='custom-list'>
-            <li>{article.textli21}</li>
-            <li>{article.textli22}</li>
-            <li>{article.textli23}</li>
-            <li>{article.textli24}</li>
-            <li>{article.textli25}</li>
-          </ul>
-          <p className='fs-25'>{article.content18}</p>
-          <p className='fs-25'>{article.content19}</p>
-          <p className='fs-25'>{article.content20}</p>
-        </div>
+                      <p className='articlepage-text fs-35 mb-30'>{article.content1}</p>
+                      <p className='page-subtext'>{article.content2}</p>
+                      <p className='fs-25'>{article.content3}</p>
+                      <img src={article.imageUrl2} alt={article.title} className="article-sub-image" />
+                      <p className='fs-25'>{article.content4}</p>
+                      <p className='fs-25'>{article.content5}</p>
+                      <ul className='custom-list'>
+                        <li>{article.textli1}</li>
+                        <li>{article.textli2}</li>
+                        <li>{article.textli3}</li>
+                        <li>{article.textli4}</li>
+                        <li>{article.textli5}</li>
+                      </ul>
+                      <p className='fs-25'>{article.content6}</p>
+                      <img src={article.imageUrl3} alt={article.title} className="article-sub-image" />
+                      <p className='fs-25'>{article.content7}</p>
+                      <p className='fs-25'>{article.content8}</p>
+                      <ul className='custom-list'>
+                        <li>{article.textli6}</li>
+                        <li>{article.textli7}</li>
+                        <li>{article.textli8}</li>
+                        <li>{article.textli9}</li>
+                        <li>{article.textli10}</li>
+                      </ul>
+                      <p className='fs-25'>{article.content9}</p>
+                      <img src={article.imageUrl4} alt={article.title} className="article-sub-image" />
+                      <p className='fs-25'>{article.content10}</p>
+                      <p className='fs-25'>{article.content11}</p>
+                      <ul className='custom-list'>
+                        <li>{article.textli11}</li>
+                        <li>{article.textli12}</li>
+                        <li>{article.textli13}</li>
+                        <li>{article.textli14}</li>
+                        <li>{article.textli15}</li>
+                      </ul>
+                      <p className='fs-25'>{article.content12}</p>
+                      <img src={article.imageUrl5} alt={article.title} className="article-sub-image" />
+                      <p className='fs-25'>{article.content13}</p>
+                      <p className='fs-25'>{article.content14}</p>
+                      <ul className='custom-list'>
+                        <li>{article.textli16}</li>
+                        <li>{article.textli17}</li>
+                        <li>{article.textli18}</li>
+                        <li>{article.textli19}</li>
+                        <li>{article.textli20}</li>
+                      </ul>
+                      <p className='fs-25'>{article.content15}</p>
+                      <img src={article.imageUrl6} alt={article.title} className="article-sub-image" />
+                      <p className='fs-25'>{article.content16}</p>
+                      <p className='fs-25'>{article.content17}</p>
+                      <ul className='custom-list'>
+                        <li>{article.textli21}</li>
+                        <li>{article.textli22}</li>
+                        <li>{article.textli23}</li>
+                        <li>{article.textli24}</li>
+                        <li>{article.textli25}</li>
+                      </ul>
+                      <p className='fs-25'>{article.content18}</p>
+                      <p className='fs-25'>{article.content19}</p>
+                      <p className='fs-25'>{article.content20}</p>
+                    </div>
             ) : article.slug === 'article13' ? (
               <div className="articlepage-content">
             <p className='articlepage-text fs-35 mb-30'>{article.content1}</p>

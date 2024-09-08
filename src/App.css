@@ -987,6 +987,10 @@ b {
 
 /* Awards */
 
+.medal-text-left {
+  text-align: start;
+}
+
 .awards_img {
   position: relative;
   background-image: url('./img/awardsImg.jpg');

@@ -72,7 +72,7 @@ function Awards() {
     <div class="content-overlay">
     <h1 className="main-title">Награды Ассоциации IABC</h1>
     <h1 className="link-title" onClick={scrollToOrder}>Медаль</h1>
-    <h1 className="link-title" onClick={scrollToStatute}>Статут</h1>
+    <h1 className="link-title" onClick={scrollToStatute}>Устав</h1>
     <h1 className="link-title" onClick={scrollToCertificateMember}>Обладатели медали</h1>
     </div>
     </div>
@@ -109,8 +109,13 @@ function Awards() {
           </Link>
         </div>
         <div className="text-center pt-100">
-        <div className="page-title" ref={statuteRef}>СТАТУТ</div>
+        <div className="page-title" ref={statuteRef}>Устав</div>
         <div className="awards-title">Почетного вручения медали «За заслуги в индустрии красоты»</div>
+        <div className="medal-text-left">        
+        <p className="page-subtext">Утвержден Общим собранием членов Международной </p>
+        <p className="page-subtext">Ассоциации красоты и ухода "МАКУ"</p>
+        <p className="page-text">Протокол № 12 от 1 сентября  2019 года</p>
+        <p className="page-text mb-60">г. Москва</p></div>
         </div>
         <p className="page-text">Отличительная медаль «За заслуги в индустрии красоты» является высшей наградой Некоммерческой организации Международной Ассоциации Красоты и Ухода</p>
         <p className="page-subtext">Отличительной медалью «За заслуги в индустрии красоты» награждаются мастера за</p>
