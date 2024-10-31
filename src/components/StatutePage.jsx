@@ -37,7 +37,7 @@ function StatutePage() {
         <div className="awards-title">Почетного вручения медали «За заслуги в индустрии красоты»</div>
         <div className="medal-text-left">        
         <p className="page-subtext">Утвержден Общим собранием членов Международной </p>
-        <p className="page-subtext">Ассоциации красоты и ухода "МАКУ"</p>
+        <p className="page-subtext">Ассоциации красоты и ухода "IABC"</p>
         <p className="page-text">Протокол № 12 от 1 сентября  2019 года</p>
         <p className="page-text mb-60">г. Москва</p></div>
 

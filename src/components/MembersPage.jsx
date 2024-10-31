@@ -14,14 +14,14 @@ import BoardMembersImage9 from '../img/BoardMembers/boardmember9.jpg';
 import BoardMembersImage10 from '../img/BoardMembers/boardmember10.jpg';
 import BoardMembersImage11 from '../img/BoardMembers/boardmember11.jpg';
 import BoardMembersImage12 from '../img/BoardMembers/boardmember12.jpg';
-import BoardMembersImage13 from '../img/BoardMembers/boardmember13.png';
+import BoardMembersImage13 from '../img/BoardMembers/boardmember13.jpg';
 import members from './members';
 
 function MembersPage() {
 
   const membersPerPage = 10;
   const [currentPage, setCurrentPage] = useState(1);
-  // Дополнительные состояния для анимации
+
   const [animating, setAnimating] = useState(false);
 
   const indexOfLastMember = currentPage * membersPerPage;
@@ -32,9 +32,9 @@ function MembersPage() {
 
   const paginate = (pageNumber) => {
     if (pageNumber < 1 || pageNumber > totalPages || animating) return;
-    setAnimating(true); // Начинаем анимацию
+    setAnimating(true); 
     setCurrentPage(pageNumber);
-    setTimeout(() => setAnimating(false), 300); // Заканчиваем анимацию после 300 мс
+    setTimeout(() => setAnimating(false), 300); 
   };
 
   const boardmembersRef = useRef(null);
@@ -73,6 +73,26 @@ function MembersPage() {
             scrollToTop();
             initialLoad.current = false;
         }
+    }, []);
+
+    useEffect(() => {
+      const replaceName = () => {
+  
+        const elements = document.querySelectorAll('[data-translate-custom="true"]');
+        elements.forEach((el) => {
+          if (document.documentElement.lang !== 'ru') {
+            el.textContent = 'Leila Gajiyeva';
+          }
+        });
+      };
+  
+      const observer = new MutationObserver(() => {
+        replaceName();
+      });
+  
+      observer.observe(document.body, { childList: true, subtree: true });
+  
+      return () => observer.disconnect();
     }, []);
 
   return (
@@ -121,16 +141,16 @@ function MembersPage() {
         imageSrc={BoardMembersImage13}
         mainText={
             <>
-              Екатерина Мирошниченко <br />(Украина)
+              Елена Крыгина <br />(Россия)
             </>
           }
-        secondaryText="Автор и разработчик уникальных курсов и технологий модного маникюра"
+        secondaryText="Популярный визажист и бьюти-блогер"
       />
         <BoardMembers
         imageSrc={BoardMembersImage3}
         mainText={
             <>
-              Игорь Стоянов <br />(Украина)
+              Игорь Стоянов <br />(Россия)
             </>
           }
         secondaryText="Эксперт в области парикмахерского искусства, основатель салонов красоты"
@@ -139,10 +159,10 @@ function MembersPage() {
         imageSrc={BoardMembersImage4}
         mainText={
             <>
-              Инга Топчий <br />(Азербайджан)
+              Андрей Шилков <br />(Росиия)
             </>
           }
-        secondaryText="Директор Академии красоты LOTOS"
+        secondaryText="Всемирно известный российский визажист"
       />
         <BoardMembers
         imageSrc={BoardMembersImage5}
@@ -175,10 +195,10 @@ function MembersPage() {
         imageSrc={BoardMembersImage8}
         mainText={
             <>
-              Ольга Саламатова <br />(Россия)
+              Гоар Аветисян <br />(Армения)
             </>
           }
-        secondaryText="Создатель и руководитель учебного центра Нейл Бьюти."
+        secondaryText="Владеет одноименным салоном красоты в Москве и школой визажа"
       />
         <BoardMembers
         imageSrc={BoardMembersImage9}
@@ -193,10 +213,10 @@ function MembersPage() {
         imageSrc={BoardMembersImage10}
         mainText={
             <>
-              Мария Налбантова <br />(Таджикистан)
+              Ольга Романова <br />(Россия)
             </>
           }
-        secondaryText="Судья Международной категории в Nail чемпионатах."
+        secondaryText="Один из первых визажистов в России, имеет свой фирменный бренд косметики Romanovamakeup"
       />
         <BoardMembers
         imageSrc={BoardMembersImage11}
@@ -232,7 +252,7 @@ function MembersPage() {
           <tbody>
             {currentMembers.map((member, index) => (
               <tr key={index}>
-                <td>{member.name}</td>
+                <td data-translate-custom={member.name === "Лейла Гаджиева" ? "true" : "false"}>{member.name}</td>
                 <td>{member.country}</td>
                 <td>{member.achievements}</td>
               </tr>
