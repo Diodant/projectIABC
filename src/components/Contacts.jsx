@@ -21,7 +21,8 @@ function Contacts() {
       <div className="contact-details">
         <p className="contact-item">Телефон: <span className="contact-info">8 (800) 550-48-76</span></p>
         <p className="contact-item">Email: <a href="iabc.association@gmail.com" className="contact-info">iabc.association@gmail.com</a></p>
-        <p className="contact-item">Адрес: <span className="contact-info">117405, Россия, Москва, Варшавское шоссе, 21 км</span></p>
+        <p className="contact-item">Адрес: <span className="contact-info">121500,г. Москва, ул. Василия Ботылева, дом 6, офис 14</span></p>
+        <p className="contact-item">ОГРН <span className="contact-info">1177700011851</span>, ИНН <span className="contact-info">7731377277</span></p>
       </div>
     </div>
     </div>

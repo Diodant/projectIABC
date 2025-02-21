@@ -62,7 +62,7 @@ function Articles() {
                         <div className="article-info">
                             <h2 className="article-title">{article.title}</h2>
                             <p className="article-summary">{article.summary}</p>
-                            <p className="article-meta">Автор: {article.author} | Дата: {new Date(article.date).toLocaleDateString()}</p>
+                            <p className="article-meta">Автор: {article.author} | Дата: {article.date}</p>
                             <Link to={`/articles/${article.slug}`} className="article-more">Подробнее →</Link>
                         </div>
                     </div>

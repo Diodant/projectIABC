@@ -204,10 +204,10 @@ function MembersPage() {
         imageSrc={BoardMembersImage9}
         mainText={
             <>
-              Светлана Андреева <br />(Молдова)
+              Анна Заболотная <br />(Россия)
             </>
           }
-        secondaryText="Основатель и руководитель проекта «Мастер с Большой Буквы» в BEAUTY сферы."
+        secondaryText="Руководитель международной академии перманентного макияжа и эстетической дермопигментации Biotek"
       />
         <BoardMembers
         imageSrc={BoardMembersImage10}
@@ -231,10 +231,10 @@ function MembersPage() {
         imageSrc={BoardMembersImage12}
         mainText={
             <>
-              Дарья Дружинина <br />(Узбекистан)
+              Анна Савина <br />(Россия)
             </>
           }
-        secondaryText="Директор-Инструктор Академии Danila Art."
+        secondaryText="Владелица Арт-клиники перманентного макияжа PIGMENT CLUB"
       />
         <div className="text-center">
         <div className="page-title" ref={membersRef}>Список членов Ассоциации</div>

@@ -250,7 +250,7 @@ function ArticlePage() {
                  </ul>
                  <p className='fs-25'>{article.content19}</p>
                  <p className='fs-25'>{article.content20}</p>
-
+                 <p className="article-meta">Автор: {article.author} | Дата: {article.date}</p>
                  </div>
                 ) : article.slug === 'article20' ? (
                   <div className="articlepage-content">
